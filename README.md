@@ -44,6 +44,8 @@ npm run preview
 - CSS (custom styles)
 
 ---
+<img width="617" height="413" alt="image" src="https://github.com/user-attachments/assets/50281a15-da95-4d25-8bd8-6c863837d8ff" />
+
 
 # React + Vite
 
