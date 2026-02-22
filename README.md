@@ -2,7 +2,7 @@
 
 One-page hackathon website for **ClubHacks** built with React + Vite.
 
-## Why I made this
+## Why This Was Made
 
 This project was created to provide a clean, modern event site for ClubHacks with all key hackathon info in one place, including:
 
