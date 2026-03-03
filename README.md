@@ -37,6 +37,16 @@ npm run build
 npm run preview
 ```
 
+## Vercel Analytics (important)
+
+This project uses **Vite + React**, so use:
+
+```jsx
+import { Analytics } from '@vercel/analytics/react'
+```
+
+Do **not** use `@vercel/analytics/next` here (that import is for Next.js apps).
+
 ## Tech stack
 
 - React
