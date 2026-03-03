@@ -7,6 +7,7 @@ import cyberClubLogo from './images/cyber.png'
 import greenTechClubLogo from './images/greentech.png'
 import roboticsClubLogo from './images/robotics.png'
 import cssClubLogo from './images/CSS.png'
+import gdgClubLogo from './images/gdg-logo.png'
 
 const navItems = [
   { label: 'Tracks', href: '#tracks' },
@@ -36,6 +37,11 @@ const tracks = [
     title: 'Robotics',
     ideas: 'Autonomous sorting bot, line-following challenge, warehouse mini-automation.',
   },
+  {
+    logo: gdgClubLogo,
+    title: 'GDG',
+    ideas: 'Google developer groups Windsor.',
+  },
 ]
 
 const workshops = [
@@ -43,6 +49,8 @@ const workshops = [
   { club: 'CyberSecurity Club', topic: 'Threat modeling for student projects...' },
   { club: 'AI Club', topic: 'Prompting + model integration basics...' },
   { club: 'Robotics Club', topic: 'Hardware-to-software workflow in 30 mins...' },
+  { club: 'GDG Club', topic: '...' },
+
 ]
 
 const schedule = [
@@ -79,6 +87,7 @@ const clubLogos = [
   { name: 'AI Club', image: aiClubLogo, href: 'https://www.instagram.com/uwindsor.ai.club/' },
   { name: 'Robotics Club', image: roboticsClubLogo, href: 'https://www.instagram.com/uwinrobotics/' },
   { name: 'Computer Science Society', image: cssClubLogo, href: 'https://www.instagram.com/uwindsorcss/' },
+  { name: 'GDG Windsor', image: gdgClubLogo, href: 'https://www.instagram.com/gdsc_uwindsor/' }
 ]
 
 function SectionHeader({ title, subtitle }) {
@@ -131,20 +140,20 @@ function App() {
               <span>ClubHacks</span>
             </h1>
             <p className="hero-copy">
-              A student hackathon where GreenTech, CyberSecurity, AI, and Robotics teams ship bold ideas in one day.
+              A student hackathon where GreenTech, CyberSecurity, AI, GDG and Robotics teams ship bold ideas in one day.
             </p>
             <div className="hero-meta">
-              <span>March 27th, 2026</span>
+              <span>April 4th, 2026</span>
               <span>Engineering Building, Room 1100</span>
               <span>8-hour build sprint</span>
             </div>
             <div className="hero-quick-stats" aria-label="Event highlights">
               <div>
-                <strong>4</strong>
+                <strong>5</strong>
                 <span>Tracks</span>
               </div>
               <div>
-                <strong>5</strong>
+                <strong>6</strong>
                 <span>Clubs</span>
               </div>
               <div>
