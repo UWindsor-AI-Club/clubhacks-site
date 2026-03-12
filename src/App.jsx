@@ -20,44 +20,49 @@ const tracks = [
   {
     logo: greenTechClubLogo,
     title: 'GreenTech',
-    ideas: 'Carbon footprint tracker, smart recycling assistant, sustainable campus map.',
+    ideas: 'Build solutions for sustainability, climate impact, and smarter living — from carbon tracking tools to green campus apps and eco-focused platforms.'
   },
   {
     logo: cyberClubLogo,
     title: 'CyberSecurity',
-    ideas: 'Phishing detection extension, secure password coach, incident simulator.',
+    ideas: 'Build tools for safer systems and smarter defense — such as phishing detection, password safety tools, privacy-first apps, or incident response simulators.',
   },
   {
     logo: aiClubLogo,
     title: 'Artificial Intelligence',
-    ideas: 'Study companion chatbot, resume analyzer, accessibility-focused AI helper.',
+    ideas: 'Build an AI system that turns messy or complex problems into clear decisions, strategies, or useful tools. Think planning assistants, accessibility tools, study companions, or intelligent productivity apps.',
   },
   {
     logo: roboticsClubLogo,
     title: 'Robotics',
-    ideas: 'Autonomous sorting bot, line-following challenge, warehouse mini-automation.',
-  },
-  {
-    logo: gdgClubLogo,
-    title: 'GDG',
-    ideas: 'Google developer groups Windsor.',
+    ideas: 'Build automation-driven solutions using robotics, embedded systems, simulation, or control logic — from sorting systems to smart task automation.',
   },
 ]
 
 const workshops = [
-  { club: 'GreenTech Club', topic: 'Eco travelling...' },
-  { club: 'CyberSecurity Club', topic: 'Threat modeling for student projects...' },
-  { club: 'AI Club', topic: 'Prompting + model integration basics...' },
-  { club: 'Robotics Club', topic: 'Hardware-to-software workflow in 30 mins...' },
-  { club: 'GDG Club', topic: '...' },
-
+  {
+    club: 'GreenTech Club + AI Club',
+    topic: 'Building a smart app from 11:00 AM - 1:00 PM that recommends eco-friendly travel based on your calendar and location.',
+  },
+  {
+    club: 'CyberSecurity Club',
+    topic: 'TBA',
+  },
+  {
+    club: 'Robotics Club',
+    topic: 'TBA',
+  },
+  {
+    club: 'GDG Club',
+    topic: 'Build with AI workshop from 1:00 PM–3:00 PM using modern AI tools and Google technologies.',
+  },
 ]
 
 const schedule = [
   { time: '8:00 AM', event: 'Check-in + breakfast + team formation' },
   { time: '9:00 AM', event: 'Opening ceremony + challenge briefing' },
   { time: '9:30 AM', event: 'Hacking begins' },
-  { time: '11:00 AM – 2:00 PM', event: 'GreenTech + AI workshop: building a smart app for eco-friendly travel based on calendar and location' },
+  { time: '11:00 AM – 1:00 PM', event: 'GreenTech + AI workshop: building a smart app for eco-friendly travel based on calendar and location' },
   { time: '1:00 PM – 3:00 PM', event: 'GDG Build with AI workshop + mentor office hours' },
   { time: '5:30 PM', event: 'Project submissions due' },
   { time: '6:00 PM', event: 'Demos + judging begin' },
@@ -81,6 +86,10 @@ const faq = [
   {
     question: 'How do I submit?',
     answer: 'Use the Register link to reach our Devpost submission portal.',
+  },
+  {
+    question: 'When is the registration deadline?',
+    answer: 'Registration closes on April 1st, 2026.',
   },
 ]
 
@@ -148,7 +157,8 @@ function App() {
             <div className="hero-meta">
               <span>April 4th, 2026</span>
               <span>Engineering Building, Room 1100</span>
-              <span>8-hour build sprint</span>
+              <span>8:00 AM – 8:00 PM</span>
+              <span>Register by April 1st</span>
             </div>
             <div className="hero-quick-stats" aria-label="Event highlights">
               <div>
@@ -166,7 +176,7 @@ function App() {
             </div>
             <div className="hero-cta">
               <Button href="https://devpost.com" variant="primary">
-                Register
+                Register (Link being posted soon)
               </Button>
               <Button href="https://discord.gg/Hz62e78uCZ " variant="secondary">
                 Join Discord
@@ -237,8 +247,14 @@ function App() {
             <SectionHeader title="Prizes" subtitle="What you can win" />
             <div className="stack">
               <Card>
-                <h3> Winners </h3>
-                <p>TBA </p>
+              <h3>Track Winners</h3>
+              <ul className="criteria">
+                <li>Best AI Project — $100 + Trophy</li>
+                <li>Best CyberSecurity Project — $100 + Trophy</li>
+                <li>Best GreenTech Project — $100 + Trophy</li>
+                <li>Best Robotics Project — $100 + Trophy</li>
+              </ul>
+              <p>Each team splits the prize among members.</p>
               </Card>
             </div>
           </div>
@@ -250,6 +266,7 @@ function App() {
                 <li>Technical execution</li>
                 <li>Impact and usability</li>
                 <li>Presentation quality</li>
+                <li>Track relevance</li>
               </ul>
             </Card>
           </div>
