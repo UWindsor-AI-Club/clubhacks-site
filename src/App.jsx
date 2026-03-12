@@ -8,10 +8,13 @@ import greenTechClubLogo from './images/greentech.png'
 import roboticsClubLogo from './images/robotics.png'
 import cssClubLogo from './images/CSS.png'
 import gdgClubLogo from './images/gdg-logo.png'
+import { FaInstagram, FaDiscord, FaLinkedin, FaGlobe } from 'react-icons/fa'
 
 const navItems = [
   { label: 'Tracks', href: '#tracks' },
+  { label: 'Workshops', href: '#workshops' },
   { label: 'Schedule', href: '#schedule' },
+  { label: 'Sponsors & Partners', href: '#sponsors' },
   { label: 'Prizes', href: '#prizes' },
   { label: 'FAQ', href: '#faq' },
 ]
@@ -94,13 +97,80 @@ const faq = [
 ]
 
 const clubLogos = [
-  { name: 'GreenTech Club', image: greenTechClubLogo, href: 'https://www.instagram.com/uwindsorgreentech/' },
-  { name: 'CyberSecurity Club', image: cyberClubLogo, href: 'https://www.instagram.com/uwincybersec/' },
-  { name: 'AI Club', image: aiClubLogo, href: 'https://www.instagram.com/uwindsor.ai.club/' },
-  { name: 'Robotics Club', image: roboticsClubLogo, href: 'https://www.instagram.com/uwinrobotics/' },
-  { name: 'Computer Science Society', image: cssClubLogo, href: 'https://www.instagram.com/uwindsorcss/' },
-  { name: 'GDG Windsor', image: gdgClubLogo, href: 'https://www.instagram.com/gdsc_uwindsor/' }
+  {
+    name: 'GreenTech Club',
+    image: greenTechClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/uwindsorgreentech/',
+      discord: 'https://discord.gg/vjNFgVZy',
+      website: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'CyberSecurity Club',
+    image: cyberClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/uwincybersec/',
+      discord: 'https://discord.gg/tkfwTxqR6p',
+      website: '',
+      linkedin: 'https://www.linkedin.com/company/uwin-cybersec-club/posts/?feedView=all',
+    },
+  },
+  {
+    name: 'AI Club',
+    image: aiClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/uwindsor.ai.club/',
+      discord: 'https://discord.gg/bkfWAhjWSK',
+      website: 'https://uwindsoraiclub.com/',
+      linkedin: 'https://www.linkedin.com/company/uwindsor-ai-club/',
+    },
+  },
+  {
+    name: 'Robotics Club',
+    image: roboticsClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/uwinrobotics/',
+      discord: 'https://discord.gg/eVd3mQABm3',
+      website: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Computer Science Society',
+    image: cssClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/uwindsorcss/',
+      discord: '',
+      website: '',
+      linkedin: 'https://www.linkedin.com/company/uwindsorcss/posts/?feedView=all',
+    },
+  },
+  {
+    name: 'GDG Windsor',
+    image: gdgClubLogo,
+    links: {
+      instagram: 'https://www.instagram.com/gdsc_uwindsor/',
+      discord: 'https://discord.gg/tCNv6Kp3YM',
+      website: '',
+      linkedin: 'https://www.linkedin.com/company/gdg-on-campus-university-of-windsor/posts/?feedView=all',
+    },
+  },
 ]
+
+const sponsors = [
+  {
+    name: 'GDG Windsor',
+    description:
+      'Sponsor of the Best Use of Gemini prize, awarded to the team that makes the most effective and creative use of Gemini in their project.',
+  },
+]
+
+const clubHacksSocials = {
+  instagram: 'https://www.instagram.com/clubhacks/',
+  linkedin: 'https://www.linkedin.com/company/club-hacks/about/?viewAsMember=true',
+}
 
 function SectionHeader({ title, subtitle }) {
   return (
@@ -152,7 +222,7 @@ function App() {
               <span>ClubHacks</span>
             </h1>
             <p className="hero-copy">
-              A student hackathon where GreenTech, CyberSecurity, AI, GDG and Robotics teams ship bold ideas in one day.
+              A student hackathon where GreenTech, CyberSecurity, AI, and Robotics builders ship bold ideas in one day, with support from partners including GDG Windsor.
             </p>
             <div className="hero-meta">
               <span>April 4th, 2026</span>
@@ -176,29 +246,69 @@ function App() {
             </div>
             <div className="hero-cta">
               <Button href="https://devpost.com" variant="primary">
-                Register (Link being posted soon)
+                Register
               </Button>
-              <Button href="https://discord.gg/Hz62e78uCZ " variant="secondary">
+              <Button href="https://discord.gg/Hz62e78uCZ" variant="secondary">
                 Join Discord
               </Button>
+            </div>
+            <div className="event-socials" aria-label="ClubHacks social links">
+              <span className="event-socials-label">Follow ClubHacks</span>
+              <a
+                className="event-social-link"
+                href={clubHacksSocials.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="ClubHacks Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                className="event-social-link"
+                href={clubHacksSocials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="ClubHacks LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
         </section>
 
         <section className="section club-row">
           <SectionHeader title="Club Collaboration" subtitle="Hosted by student clubs" />
-          <div className="logo-grid" aria-label="Collaborating clubs">
+          <div className="grid three" aria-label="Collaborating clubs">
             {clubLogos.map((club) => (
-              <a
-                key={club.name}
-                className="logo-pill"
-                href={club.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${club.name} Instagram`}
-              >
-                <img src={club.image} alt={club.name} />
-              </a>
+              <Card key={club.name}>
+                <div className="track-icon club-card-icon">
+                  <img src={club.image} alt={club.name} />
+                </div>
+                <h3>{club.name}</h3>
+
+                <div className="club-links">
+                  {club.links.instagram && (
+                    <a href={club.links.instagram} target="_blank" rel="noreferrer" aria-label={`${club.name} Instagram`}>
+                      <FaInstagram />
+                    </a>
+                  )}
+                  {club.links.discord && (
+                    <a href={club.links.discord} target="_blank" rel="noreferrer" aria-label={`${club.name} Discord`}>
+                      <FaDiscord />
+                    </a>
+                  )}
+                  {club.links.website && (
+                    <a href={club.links.website} target="_blank" rel="noreferrer" aria-label={`${club.name} Website`}>
+                      <FaGlobe />
+                    </a>
+                  )}
+                  {club.links.linkedin && (
+                    <a href={club.links.linkedin} target="_blank" rel="noreferrer" aria-label={`${club.name} LinkedIn`}>
+                      <FaLinkedin />
+                    </a>
+                  )}
+                </div>
+              </Card>
             ))}
           </div>
         </section>
@@ -218,7 +328,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section">
+        <section id="workshops" className="section">
           <SectionHeader title="Workshops" subtitle="Quick boosts from each club" />
           <div className="grid four">
             {workshops.map((item) => (
@@ -242,19 +352,40 @@ function App() {
           </div>
         </section>
 
+        <section id="sponsors" className="section">
+          <SectionHeader title="Sponsors & Partners" subtitle="Supporting ClubHacks" />
+          <div className="grid two">
+            {sponsors.map((sponsor) => (
+              <Card key={sponsor.name}>
+                <h3>{sponsor.name}</h3>
+                <p>{sponsor.description}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         <section id="prizes" className="section two-col">
           <div>
             <SectionHeader title="Prizes" subtitle="What you can win" />
             <div className="stack">
               <Card>
-              <h3>Track Winners</h3>
-              <ul className="criteria">
-                <li>Best AI Project — $100 + Trophy</li>
-                <li>Best CyberSecurity Project — $100 + Trophy</li>
-                <li>Best GreenTech Project — $100 + Trophy</li>
-                <li>Best Robotics Project — $100 + Trophy</li>
-              </ul>
-              <p>Each team splits the prize among members.</p>
+                <h3>Track Winners</h3>
+                <ul className="criteria">
+                  <li>Best AI Project — $100 + Trophy</li>
+                  <li>Best CyberSecurity Project — $100 + Trophy</li>
+                  <li>Best GreenTech Project — $100 + Trophy</li>
+                  <li>Best Robotics Project — $100 + Trophy</li>
+                </ul>
+                <p><em>Each team splits the prize among members.</em></p>
+              </Card>
+
+              <Card>
+                <h3>Partner Prize</h3>
+                <p>
+                  <strong>Best Use of Gemini</strong> — sponsored by <strong>GDG Windsor</strong>, awarded to the team
+                  that makes the most effective and creative use of Gemini in their project.
+                </p>
+                <p><em>Additional partner prizes may be announced.</em></p>
               </Card>
             </div>
           </div>
@@ -291,6 +422,12 @@ function App() {
         <div className="footer-links">
           <a href="mailto:ai-club@uwindsor.ca">Contact</a>
           <a href="https://devpost.com">Devpost</a>
+          <a href={clubHacksSocials.instagram} target="_blank" rel="noreferrer" aria-label="ClubHacks Instagram">
+            <FaInstagram />
+          </a>
+          <a href={clubHacksSocials.linkedin} target="_blank" rel="noreferrer" aria-label="ClubHacks LinkedIn">
+            <FaLinkedin />
+          </a>
         </div>
       </footer>
     </div>

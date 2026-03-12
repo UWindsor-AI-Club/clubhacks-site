@@ -213,6 +213,39 @@ h1 span {
   margin-top: 1rem;
 }
 
+.event-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.event-socials-label {
+  color: #d1dbfb;
+  font-size: 0.95rem;
+}
+
+.event-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.event-social-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
 .btn {
   border-radius: 999px;
   padding: 0.75rem 1.25rem;
@@ -269,6 +302,10 @@ h2 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid.two,
 .two-col {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -312,6 +349,35 @@ h2 {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
   padding: 0.25rem;
+}
+
+.club-card-icon {
+  justify-content: center;
+}
+
+.club-row .card {
+  text-align: center;
+}
+
+.club-row .card h3 {
+  margin-bottom: 0;
+}
+
+.club-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.club-links a {
+  color: inherit;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.club-links a:hover {
+  transform: scale(1.1);
 }
 
 .club-row .logo-grid {
@@ -394,6 +460,7 @@ h2 {
 
 .footer-links {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -403,6 +470,7 @@ h2 {
 
 @media (max-width: 900px) {
   .grid.four,
+  .grid.three,
   .club-row .logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -421,6 +489,7 @@ h2 {
   }
 
   .grid.four,
+  .grid.three,
   .club-row .logo-grid {
     grid-template-columns: 1fr;
   }
