@@ -54,12 +54,15 @@ const workshops = [
 ]
 
 const schedule = [
-  { time: '9:00 AM', event: 'Check-in + team formation' },
-  { time: '9:30 AM', event: 'Opening + challenge briefing' },
-  { time: '10:00 AM', event: 'Build sprint begins' },
-  { time: '1:00 PM', event: 'Workshops + mentor office hours' },
-  { time: '4:30 PM', event: 'Project submissions due' },
-  { time: '5:00 PM', event: 'Demos, judging, and winners' },
+  { time: '8:00 AM', event: 'Check-in + breakfast + team formation' },
+  { time: '9:00 AM', event: 'Opening ceremony + challenge briefing' },
+  { time: '9:30 AM', event: 'Hacking begins' },
+  { time: '11:00 AM – 2:00 PM', event: 'GreenTech + AI workshop: building a smart app for eco-friendly travel based on calendar and location' },
+  { time: '1:00 PM – 3:00 PM', event: 'GDG Build with AI workshop + mentor office hours' },
+  { time: '5:30 PM', event: 'Project submissions due' },
+  { time: '6:00 PM', event: 'Demos + judging begin' },
+  { time: '7:30 PM', event: 'Winners announced + closing' },
+  { time: '8:00 PM', event: 'Event ends' },
 ]
 
 const faq = [
@@ -149,7 +152,7 @@ function App() {
             </div>
             <div className="hero-quick-stats" aria-label="Event highlights">
               <div>
-                <strong>5</strong>
+                <strong>4</strong>
                 <span>Tracks</span>
               </div>
               <div>
@@ -157,7 +160,7 @@ function App() {
                 <span>Clubs</span>
               </div>
               <div>
-                <strong>$$</strong>
+                <strong>$500+</strong>
                 <span>Prizes</span>
               </div>
             </div>
@@ -165,7 +168,7 @@ function App() {
               <Button href="https://devpost.com" variant="primary">
                 Register
               </Button>
-              <Button href="https://discord.com" variant="secondary">
+              <Button href="https://discord.gg/Hz62e78uCZ " variant="secondary">
                 Join Discord
               </Button>
             </div>
