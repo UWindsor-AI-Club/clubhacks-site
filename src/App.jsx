@@ -142,8 +142,8 @@ const clubLogos = [
     image: cssClubLogo,
     links: {
       instagram: 'https://www.instagram.com/uwindsorcss/',
-      discord: '',
-      website: '',
+      discord: 'https://css.uwindsor.ca/discord',
+      website: 'https://css.uwindsor.ca/',
       linkedin: 'https://www.linkedin.com/company/uwindsorcss/posts/?feedView=all',
     },
   },
@@ -245,7 +245,7 @@ function App() {
               </div>
             </div>
             <div className="hero-cta">
-              <Button href="https://devpost.com" variant="primary">
+              <Button href="https://clubhacks.devpost.com/?_gl=1*1i021yi*_gcl_au*ODYxMDE1NTMxLjE3NzA1NjU1Mzc.*_ga*Njc4NjQwNjAzLjE3NzA1NjU1Mzc.*_ga_0YHJK3Y10M*czE3NzMzNDYyNjIkbzE5JGcxJHQxNzczMzQ2NTg5JGo1OSRsMCRoMA.." variant="primary">
                 Register
               </Button>
               <Button href="https://discord.gg/Hz62e78uCZ" variant="secondary">
