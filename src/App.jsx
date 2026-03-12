@@ -67,6 +67,7 @@ const schedule = [
   { time: '9:30 AM', event: 'Hacking begins' },
   { time: '11:00 AM – 1:00 PM', event: 'GreenTech + AI workshop: building a smart app for eco-friendly travel based on calendar and location' },
   { time: '1:00 PM – 3:00 PM', event: 'GDG Build with AI workshop + mentor office hours' },
+  { time: '3:30 PM', event: 'Lunch' },
   { time: '5:30 PM', event: 'Project submissions due' },
   { time: '6:00 PM', event: 'Demos + judging begin' },
   { time: '7:30 PM', event: 'Winners announced + closing' },
@@ -421,7 +422,7 @@ function App() {
         <p>© 2026 ClubHacks</p>
         <div className="footer-links">
           <a href="mailto:ai-club@uwindsor.ca">Contact</a>
-          <a href="https://devpost.com">Devpost</a>
+          <a href="https://clubhacks.devpost.com/?_gl=1*1c2o8xm*_gcl_au*ODYxMDE1NTMxLjE3NzA1NjU1Mzc.*_ga*Njc4NjQwNjAzLjE3NzA1NjU1Mzc.*_ga_0YHJK3Y10M*czE3NzMzNDYyNjIkbzE5JGcxJHQxNzczMzQ2OTY4JGo1NSRsMCRoMA..">Devpost</a>
           <a href={clubHacksSocials.instagram} target="_blank" rel="noreferrer" aria-label="ClubHacks Instagram">
             <FaInstagram />
           </a>
