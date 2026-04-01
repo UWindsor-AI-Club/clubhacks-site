@@ -363,6 +363,17 @@ h2 {
   margin-bottom: 0;
 }
 
+.sponsor-logo {
+  justify-content: center;
+}
+
+.sponsor-logo img {
+  width: min(180px, 60vw);
+  height: auto;
+  padding: 0;
+  background: transparent;
+}
+
 .club-links {
   display: flex;
   justify-content: center;

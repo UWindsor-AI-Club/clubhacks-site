@@ -8,6 +8,7 @@ import greenTechClubLogo from './images/greentech.png'
 import roboticsClubLogo from './images/robotics.png'
 import cssClubLogo from './images/CSS.png'
 import gdgClubLogo from './images/gdg-logo.png'
+import featherlessLogo from './images/featherless-full-dark.svg'
 import { FaInstagram, FaDiscord, FaLinkedin, FaGlobe } from 'react-icons/fa'
 
 const navItems = [
@@ -57,7 +58,19 @@ const workshops = [
   },
   {
     club: 'GDG Club',
-    topic: 'Build with AI workshop from 1:00 PM–3:00 PM using modern AI tools and Google technologies.',
+    topic: (
+      <>
+        Build with AI workshop from 1:00 PM–3:00 PM using modern AI tools and Google technologies.{' '}
+        <a
+          href="https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-windsor-windsor-canada-presents-building-a-travel-helper-agent-adk-amp-gemini-workshop/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Attend here
+        </a>
+        .
+      </>
+    ),
   },
 ]
 
@@ -166,6 +179,11 @@ const sponsors = [
     description:
       'Sponsor of the Best Use of Gemini prize, awarded to the team that makes the most effective and creative use of Gemini in their project.',
   },
+  {
+    name: 'Featherless AI',
+    description:
+      'Featherless AI is providing one month of hosted AI model access for all participants, plus sponsored prizes in Featherless credits for the top 3 teams.',
+  },
 ]
 
 const clubHacksSocials = {
@@ -223,7 +241,7 @@ function App() {
               <span>ClubHacks</span>
             </h1>
             <p className="hero-copy">
-              A student hackathon where GreenTech, CyberSecurity, AI, and Robotics builders ship bold ideas in one day, with support from partners including GDG Windsor.
+              A student hackathon where GreenTech, CyberSecurity, AI, and Robotics builders ship bold ideas in one day, with support from partners including GDG Windsor and Featherless AI.
             </p>
             <div className="hero-meta">
               <span>April 4th, 2026</span>
@@ -241,13 +259,16 @@ function App() {
                 <span>Clubs</span>
               </div>
               <div>
-                <strong>$500+</strong>
-                <span>Prizes</span>
+                <strong>$1000+</strong>
+                <span>In Prizes</span>
               </div>
             </div>
             <div className="hero-cta">
-              <Button href="https://clubhacks.devpost.com/?_gl=1*1i021yi*_gcl_au*ODYxMDE1NTMxLjE3NzA1NjU1Mzc.*_ga*Njc4NjQwNjAzLjE3NzA1NjU1Mzc.*_ga_0YHJK3Y10M*czE3NzMzNDYyNjIkbzE5JGcxJHQxNzczMzQ2NTg5JGo1OSRsMCRoMA.." variant="primary">
+              <Button href="https://forms.office.com/pages/responsepage.aspx?id=szP5EmE9GUuaTWiQId6MyXVwJg0sUe9AvxObJKUNQa9UMjMwNlQwVTc4SlpISVRaU0IzTUVIMjZBTSQlQCN0PWcu&route=shorturl" variant="primary">
                 Register
+              </Button>
+              <Button href="https://clubhacks.devpost.com/?_gl=1*1i021yi*_gcl_au*ODYxMDE1NTMxLjE3NzA1NjU1Mzc.*_ga*Njc4NjQwNjAzLjE3NzA1NjU1Mzc.*_ga_0YHJK3Y10M*czE3NzMzNDYyNjIkbzE5JGcxJHQxNzczMzQ2NTg5JGo1OSRsMCRoMA.." variant="primary">
+                Devpost
               </Button>
               <Button href="https://discord.gg/Hz62e78uCZ" variant="secondary">
                 Join Discord
@@ -358,6 +379,11 @@ function App() {
           <div className="grid two">
             {sponsors.map((sponsor) => (
               <Card key={sponsor.name}>
+                {sponsor.name === 'Featherless AI' && (
+                  <div className="track-icon sponsor-logo">
+                    <img src={featherlessLogo} alt="Featherless AI logo" />
+                  </div>
+                )}
                 <h3>{sponsor.name}</h3>
                 <p>{sponsor.description}</p>
               </Card>
@@ -372,10 +398,10 @@ function App() {
               <Card>
                 <h3>Track Winners</h3>
                 <ul className="criteria">
-                  <li>Best AI Project — $100 + Trophy</li>
-                  <li>Best CyberSecurity Project — $100 + Trophy</li>
-                  <li>Best GreenTech Project — $100 + Trophy</li>
-                  <li>Best Robotics Project — $100 + Trophy</li>
+                  <li>Best AI Project — $100</li>
+                  <li>Best CyberSecurity Project — $100</li>
+                  <li>Best GreenTech Project — $100</li>
+                  <li>Best Robotics Project — $100</li>
                 </ul>
                 <p><em>Each team splits the prize among members.</em></p>
               </Card>
@@ -387,6 +413,14 @@ function App() {
                   that makes the most effective and creative use of Gemini in their project.
                 </p>
                 <p><em>Additional partner prizes may be announced.</em></p>
+                <p>
+                  <strong>Featherless AI Prizes</strong> — 1st place: $300 in Featherless credits, 2nd place: $150, 3rd place: $75.
+                </p>
+              </Card>
+
+              <Card>
+                <h3>Certificates</h3>
+                <p>All registered attendees will receive certificates after the event, so be sure to register in advance.</p>
               </Card>
             </div>
           </div>
