@@ -50,7 +50,7 @@ const workshops = [
   },
   {
     club: 'CyberSecurity Club',
-    topic: 'TBA',
+    topic: 'Introduction to Steganography from 3:00 PM - 3:40 PM: Hiding in Plain Sight - Learn how information can be hidden inside ordinary looking files or media. Understand steganography basics, think about hidden data and digital clues, and connect security concepts to real technical challenges.',
   },
   {
     club: 'Robotics Club',
@@ -80,6 +80,7 @@ const schedule = [
   { time: '9:30 AM', event: 'Hacking begins' },
   { time: '11:00 AM – 1:00 PM', event: 'GreenTech + AI workshop: building a smart app for eco-friendly travel based on calendar and location' },
   { time: '1:00 PM – 3:00 PM', event: 'GDG Build with AI workshop + mentor office hours' },
+  { time: '3:00 PM – 3:40 PM', event: 'CyberSecurity workshop: Introduction to Steganography - Hiding in Plain Sight' },
   { time: '3:30 PM', event: 'Lunch' },
   { time: '5:30 PM', event: 'Project submissions due' },
   { time: '6:00 PM', event: 'Demos + judging begin' },
@@ -398,9 +399,9 @@ function App() {
               <Card>
                 <h3>Track Winners</h3>
                 <ul className="criteria">
-                  <li>Best AI Project — $100</li>
-                  <li>Best CyberSecurity Project — $100</li>
-                  <li>Best GreenTech Project — $100</li>
+                  <li>Best AI Project — $100 + $300 in Featherless credits</li>
+                  <li>Best CyberSecurity Project — $100 + $75 in Featherless credits</li>
+                  <li>Best GreenTech Project — $100 + $150 in Featherless credits</li>
                   <li>Best Robotics Project — $100</li>
                 </ul>
                 <p><em>Each team splits the prize among members.</em></p>
@@ -409,7 +410,7 @@ function App() {
               <Card>
                 <h3>Partner Prize</h3>
                 <p>
-                  <strong>Best Use of Gemini</strong> — sponsored by <strong>GDG Windsor</strong>, awarded to the team
+                  <strong>Best Use of Gemini</strong> — sponsored by <strong>GDG Windsor</strong>, $100 awarded to the team
                   that makes the most effective and creative use of Gemini in their project.
                 </p>
                 <p><em>Additional partner prizes may be announced.</em></p>
